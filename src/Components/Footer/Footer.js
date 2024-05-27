@@ -4,9 +4,6 @@ import { ReactComponent as Logo } from "../../Resources/image/logo.svg";
 import { ReactComponent as AppStore } from "../../Resources/image/appstorebadge.svg";
 
 const Footer = props => {
-    const {
-        
-    } = props;
 
     return (
         <div className={styles.footer}>

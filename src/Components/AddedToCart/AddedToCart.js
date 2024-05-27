@@ -4,9 +4,6 @@ import { ReactComponent as Added } from "../../Resources/image/added.svg";
 import AnimatedCard from '../../Containers/AnimatedPage/AnimatedCard';
 
 const AddedToCart = props => {
-    const {
-        game
-    } = props;
 
     return (
         <AnimatedCard>

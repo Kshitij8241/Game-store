@@ -8,7 +8,6 @@ import Cart from '../../Components/Cart/Cart';
 
 const Home = props => {
   const {
-    shownGames,
     cartAmount,
     cart,
     cartDisplayed,
@@ -24,8 +23,6 @@ const Home = props => {
   } = props;
 
   const [browsing, setBrowsing] = useState(false);
-  const [landingPage, setLandingPage] = useState(true);
-
   const navigate = useNavigate();
 
   const handleHover = (e) => {
@@ -50,26 +47,6 @@ const Home = props => {
     navigate('/');
   }
 
-  const handleNavGamePage = () => {
-    setHoverState([...hoverState, hoverState[21].hovered = false]);
-    navigate('/react-ecommerce-store/games/riseofthetombraider');
-  }
-  
-  const handleNavNotFoundPage = () => {
-    navigate('/react-ecommerce-store/this-page');
-  }
-  
-  const handleNavNotFoundQuery = () => {
-    navigate('/react-ecommerce-store/games/404');
-  }
-  
-
-
-  const variants = {
-    hidden: { opacity: 1, x: -150 },
-    visible: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: 150 },
-  }
 
   const buttonVariants = {
     hidden: { opacity: 0, y: 900 },
@@ -113,7 +90,6 @@ const Home = props => {
                   browsing={browsing}
                   handleBrowse={handleBrowse}
                   handleHome={handleHome}
-                  landingPage={landingPage}
                   cartAmount={cartAmount}
                   handleOpenCart={handleOpenCart}
                   handleCloseCart={handleCloseCart}

@@ -1,6 +1,4 @@
-import logo from './logo.svg';
-import styles from './App.module.css';
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import Browse from './Containers/Browse/Browse';
 import GamePage from './Containers/GamePage/GamePage';
@@ -132,7 +130,7 @@ function App() {
 const navigate = useNavigate();
 const location = useLocation();
 
-if (location.pathname != "/react-ecommerce-store/" && location.pathname != "/react-ecommerce-store/browse" && selectedGame === false) {
+if (location.pathname !== "/react-ecommerce-store/" && location.pathname !== "/react-ecommerce-store/browse" && selectedGame === false) {
   let surname = location.pathname.substring(29);
   console.log("test");
   let currentGame = games.find(game => game.surname === surname);

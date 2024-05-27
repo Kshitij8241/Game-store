@@ -1,9 +1,7 @@
 import styles from './Slider.module.css';
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect } from 'react';
 import { ReactComponent as Left } from "../../Resources/image/left.svg";
 import { ReactComponent as Right } from "../../Resources/image/right.svg";
-import { ReactComponent as Dot } from "../../Resources/image/dot.svg";
 import { useLocation } from 'react-router-dom';
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
@@ -14,21 +12,21 @@ const Slider = props => {
     selectedGame,
     setSelectedGame,
     allGames,
-    incrementCarousel,
-    decrementCarousel,
     carouselState,
     setCarouselState,
     hoverState,
     handleHover
   } = props;
 
-  const [footageIndex, setFootageIndex] = useState(0);
   const slideRef = React.createRef();
   const location = useLocation();
 
+  const selectedGameIndex = allGames.findIndex(game => "/react-ecommerce-store/games/" + game.surname === location.pathname);
+  
   useEffect(() => {
-    const selectedGameIndex = allGames.findIndex(game => "/react-ecommerce-store/games/" + game.surname === location.pathname);
+    
     setSelectedGame(allGames[selectedGameIndex]);
+    // eslint-disable-next-line
   }, []);
 
   const properties = {
