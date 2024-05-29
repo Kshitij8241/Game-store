@@ -3,8 +3,8 @@
 
 
 ![](Untitled.png)
-![](Trending page.png)
-![](Game page.png)
+![](Trendingpage.png)
+![](Gamepage.png)
 ![](Cart.png)
 
 
