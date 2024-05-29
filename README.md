@@ -5,7 +5,7 @@
   Game Store built with React
 </p>
 
-![](/src/Resources/image/preview0.png)
+![](Untitled.png)
 ![](/src/Resources/image/preview1.png)
 ![](/src/Resources/image/preview2.png)
 ![](/src/Resources/image/preview3.png)
